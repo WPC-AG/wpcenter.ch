@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Richtofferte Wärmepumpe – kostenlos in 3 Minuten | WPC</title>
+<meta name="description" content="Kostenlose Richtofferte für Ihre Wärmepumpe: Angaben zu Gebäude, Heizung und Verbrauch eingeben – ein WPC-Berater meldet sich innert 2 Arbeitstagen.">
+<meta property="og:locale" content="de_CH">
+<meta property="og:title" content="Richtofferte Wärmepumpe – kostenlos in 3 Minuten | WPC">
+<meta property="og:description" content="Kostenlose Richtofferte für Ihre Wärmepumpe: Angaben zu Gebäude, Heizung und Verbrauch eingeben – ein WPC-Berater meldet sich innert 2 Arbeitstagen.">
+<meta name="theme-color" content="#1F6F6B">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="proto">Prototyp zur internen Diskussion – nicht die offizielle Webseite von WPC</div>
+<header class="site"><div class="wrap">
+ <a class="logo" href="index.html"><img src="https://www.wpcenter.ch/images/logo-black.svg" alt="WPC WärmepumpenCenter AG" width="140" height="34"></a>
+ <nav class="main" id="nav"><a href="waermepumpe.html">Wärmepumpe</a><a href="kosten.html">Kosten &amp; Förderung</a><a href="service.html">Service &amp; Pikett</a><a href="referenzen.html">Referenzen</a><a href="kontakt.html">Kontakt</a></nav>
+ <a class="btn btn-primary btn-sm hdr-cta" href="offerte.html">Richtofferte</a>
+ <button class="menu-toggle" aria-label="Menü" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+</div></header>
+<main>
+
+<div class="pagehead"><div class="wrap"><div class="crumb"><a href="index.html">Start</a> / Richtofferte</div>
+<h1>Ihre Richtofferte in 3 Minuten</h1><p>Kostenlos und unverbindlich. Sie erhalten eine Einschätzung von einem WPC-Berater – nicht von einem Algorithmus.</p></div></div>
+<section><div class="wrap" style="max-width:760px">
+<form class="f" id="of" onsubmit="event.preventDefault()">
+ <div class="steps"><span class="on"></span><span></span><span></span><span></span></div>
+ <div class="step on"><h3>1. Ihr Gebäude</h3>
+  <label>Gebäudeart</label><div class="choices"><label><input type="radio" name="ga">Einfamilienhaus</label><label><input type="radio" name="ga">Mehrfamilienhaus</label><label><input type="radio" name="ga">Gewerbe / Landwirtschaft</label></div>
+  <div class="row"><div><label>Baujahr (ca.)</label><input inputmode="numeric" placeholder="z. B. 1978"></div><div><label>Beheizte Fläche (m²)</label><input inputmode="numeric" placeholder="z. B. 160"></div></div></div>
+ <div class="step"><h3>2. Heute</h3>
+  <label>Aktuelle Heizung</label><div class="choices"><label><input type="radio" name="hz">Öl</label><label><input type="radio" name="hz">Gas</label><label><input type="radio" name="hz">Elektro</label><label><input type="radio" name="hz">Holz</label><label><input type="radio" name="hz">Alte Wärmepumpe</label></div>
+  <label>Jahresverbrauch (falls bekannt)</label><input placeholder="z. B. 2'500 Liter Öl"></div>
+ <div class="step"><h3>3. Wärmeverteilung &amp; Wunsch</h3>
+  <label>Wärmeverteilung</label><div class="choices"><label><input type="radio" name="wv">Bodenheizung</label><label><input type="radio" name="wv">Radiatoren</label><label><input type="radio" name="wv">Gemischt</label></div>
+  <label>Bevorzugte Wärmequelle</label><div class="choices"><label><input type="radio" name="wq">Luft-Wasser</label><label><input type="radio" name="wq">Erdsonde</label><label><input type="radio" name="wq">Grundwasser</label><label><input type="radio" name="wq">Weiss ich nicht – beraten Sie mich</label></div></div>
+ <div class="step"><h3>4. Kontakt</h3>
+  <div class="row"><div><label>Name</label><input></div><div><label>PLZ / Ort</label><input></div></div>
+  <div class="row"><div><label>Telefon</label><input type="tel"></div><div><label>E-Mail</label><input type="email"></div></div></div>
+ <div class="formnav"><button type="button" class="btn btn-ghost" id="back" style="visibility:hidden">Zurück</button><button type="button" class="btn btn-primary" id="next">Weiter</button></div>
+</form>
+<div class="ok" id="ok-o"><h3>Danke – wir melden uns innert 2 Arbeitstagen.</h3><p>Prototyp: Die Anfrage würde direkt bei WPC landen (E-Mail / bossERP), statt wie heute zum Rechner von Stiebel Eltron zu führen.</p></div>
+</div></section>
+<script>
+(function(){var s=[...document.querySelectorAll('.step')],b=[...document.querySelectorAll('.steps span')],i=0,n=document.getElementById('next'),bk=document.getElementById('back');
+function show(){s.forEach((e,k)=>e.classList.toggle('on',k==i));b.forEach((e,k)=>e.classList.toggle('on',k<=i));bk.style.visibility=i?'visible':'hidden';n.textContent=i==s.length-1?'Richtofferte anfordern':'Weiter';}
+n.onclick=function(){if(i<s.length-1){i++;show();}else{document.getElementById('of').style.display='none';document.getElementById('ok-o').style.display='block';}};
+bk.onclick=function(){if(i>0){i--;show();}};})();
+</script>
+
+</main>
+<footer class="site"><div class="wrap">
+ <div class="cols">
+  <div><h4>WPC WärmepumpenCenter AG</h4>Rubigenstrasse 79, 3076 Worb<br><a href="tel:+41315991111">031 599 11 11</a><br>Pikett: <a href="tel:+41315991199">031 599 11 99</a></div>
+  <div><h4>Wärmepumpe</h4><a href="waermepumpe.html">Wärmequellen im Vergleich</a><br><a href="kosten.html">Kosten &amp; Förderung</a><br><a href="offerte.html">Richtofferte</a></div>
+  <div><h4>Service</h4><a href="service.html">Wartung</a><br><a href="service.html#stoerung">Störung melden</a><br><a href="tel:+41315991199">Pikett 24/7</a></div>
+  <div><h4>Unternehmen</h4><a href="referenzen.html">Referenzen</a><br><a href="kontakt.html">Standorte</a><br><a href="https://www.linkedin.com/company/wpc-w%C3%A4rmepumpencenter-ag/">LinkedIn</a> · <a href="https://www.instagram.com/wpc_ag/">Instagram</a></div>
+ </div>
+ <div class="legal">© 2026 WPC WärmepumpenCenter AG · Impressum · Datenschutz</div>
+</div></footer>
+<nav class="actionbar" aria-label="Schnellzugriff">
+ <a href="tel:+41315991111"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Anrufen</a>
+ <a class="pk" href="tel:+41315991199"><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>Pikett</a>
+ <a class="of" href="offerte.html"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Offerte</a>
+</nav>
+</body></html>
