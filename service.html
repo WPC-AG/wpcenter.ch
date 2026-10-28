@@ -34,23 +34,32 @@
   <ul><li>Offizieller Servicepartner von Stiebel Eltron</li><li>Übernahme der Kundenanlagen von A&amp;O Wärmepumpen und Steinmann Wärmepumpenservice</li><li>Erfahrung in Kälte-, Heizungs-, Elektro- und Steuertechnik</li></ul>
   <blockquote style="margin-top:28px">«Ein zuverlässiger und jederzeit verfügbarer Service ist uns wichtig – auch wenn wir diesen bisher nicht in Anspruch nehmen mussten.»<cite>Martin Gysler, Münsingen</cite></blockquote>
  </div>
- <form class="f" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('ok-s').style.display='block'">
-  <h2 style="font-size:26px">Service anfragen</h2><p class="note" style="margin-top:0">Für Wartung und nicht dringende Anliegen. Wir melden uns innert 1 Arbeitstag.</p>
-  <label>Anliegen</label><select><option>Wartung / Service-Abo</option><option>Störung (nicht dringend)</option><option>Inbetriebnahme</option><option>Andere Frage</option></select>
-  <div class="row"><div><label>Name</label><input required></div><div><label>Telefon</label><input type="tel" required></div></div>
-  <label>Adresse der Anlage</label><input>
-  <div class="row"><div><label>Hersteller</label><input placeholder="z. B. Stiebel Eltron"></div><div><label>Baujahr (ca.)</label><input></div></div>
-  <label>Foto vom Typenschild</label><input type="file" accept="image/*" capture="environment">
-  <label>Beschreibung</label><textarea rows="3"></textarea>
-  <button class="btn btn-primary" type="submit">Anfrage senden</button>
+ <form class="f" id="sf" onsubmit="event.preventDefault();var g=function(i){return document.getElementById(i).value};var body='Anliegen: '+g('s1')+'
+Name: '+g('s2')+'
+Telefon: '+g('s3')+'
+Adresse der Anlage: '+g('s4')+'
+Hersteller: '+g('s5')+'
+Baujahr: '+g('s6')+'
+
+Beschreibung:
+'+g('s7')+'
+
+(Bitte Foto vom Typenschild anhängen)';location.href='mailto:service@wpcenter.ch?subject='+encodeURIComponent('Serviceanfrage: '+g('s1')+' – '+g('s2'))+'&body='+encodeURIComponent(body)">
+  <h2 style="font-size:26px">Service anfragen</h2><p class="note" style="margin-top:0">Für Wartung und nicht dringende Anliegen. Das Formular öffnet eine vorbereitete E-Mail an <a href="mailto:service@wpcenter.ch">service@wpcenter.ch</a>.</p>
+  <label>Anliegen</label><select id="s1"><option>Wartung / Service-Abo</option><option>Störung (nicht dringend)</option><option>Inbetriebnahme</option><option>Andere Frage</option></select>
+  <div class="row"><div><label>Name</label><input id="s2" required></div><div><label>Telefon</label><input id="s3" type="tel" required></div></div>
+  <label>Adresse der Anlage</label><input id="s4">
+  <div class="row"><div><label>Hersteller</label><input id="s5" placeholder="z. B. Stiebel Eltron"></div><div><label>Baujahr (ca.)</label><input id="s6"></div></div>
+  <label>Beschreibung</label><textarea id="s7" rows="3"></textarea>
+  <p class="note">Tipp: Hängen Sie in der E-Mail ein Foto vom Typenschild an – so können wir schneller helfen.</p>
+  <button class="btn btn-primary" type="submit">E-Mail an Service erstellen</button>
  </form>
- <div class="ok" id="ok-s"><h3>Danke!</h3><p>Prototyp: Hier würde die Anfrage direkt im Service-Postfach bzw. im ERP landen.</p></div>
 </div></section>
 
 </main>
 <footer class="site"><div class="wrap">
  <div class="cols">
-  <div><h4>WPC WärmepumpenCenter AG</h4>Rubigenstrasse 79, 3076 Worb<br><a href="tel:+41315991111">031 599 11 11</a><br>Pikett: <a href="tel:+41315991199">031 599 11 99</a></div>
+  <div><h4>WPC WärmepumpenCenter AG</h4>Rubigenstrasse 79, 3076 Worb<br><a href="tel:+41315991111">031 599 11 11</a> · <a href="mailto:service@wpcenter.ch">service@wpcenter.ch</a><br>Pikett: <a href="tel:+41315991199">031 599 11 99</a><ul class="hours" style="margin-top:12px;max-width:340px"><li><span>Montag – Donnerstag</span><span>07:30–12:00, 13:30–17:00</span></li><li><span>Freitag</span><span>07:30–12:00, 13:30–16:00</span></li><li><span>Samstag, Sonntag</span><span>geschlossen – Pikettdienst</span></li></ul></div>
   <div><h4>Wärmepumpe</h4><a href="waermepumpe.html">Wärmequellen im Vergleich</a><br><a href="kosten.html">Kosten &amp; Förderung</a><br><a href="offerte.html">Richtofferte</a></div>
   <div><h4>Service</h4><a href="service.html">Wartung</a><br><a href="service.html#stoerung">Störung melden</a><br><a href="tel:+41315991199">Pikett 24/7</a></div>
   <div><h4>Unternehmen</h4><a href="referenzen.html">Referenzen</a><br><a href="kontakt.html">Standorte</a><br><a href="https://www.linkedin.com/company/wpc-w%C3%A4rmepumpencenter-ag/">LinkedIn</a> · <a href="https://www.instagram.com/wpc_ag/">Instagram</a></div>
